@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 
-![Python](https://img.shields.io/badge/python-3.x-blue) ![Flask](https://img.shields.io/badge/flask-framework-black) ![SQLite](https://img.shields.io/badge/sqlite-database-lightgrey) ![License](https://img.shields.io/badge/license-MIT-green) [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin)](https://linkedin.com/in/prarthanasriyas)
+[![Python](https://img.shields.io/badge/python-3.x-blue)](https://www.python.org/) [![Flask](https://img.shields.io/badge/flask-framework-black)](https://flask.palletsprojects.com/) [![SQLite](https://img.shields.io/badge/sqlite-database-lightgrey)](https://www.sqlite.org/) [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/prarthanasriyas7/url-shortener/blob/main/LICENSE) [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin)](https://linkedin.com/in/prarthanasriyas)
 
 <div align="center">
 
@@ -48,15 +48,15 @@ Here's what makes it useful:
 - Once a link expires, submitting the same long URL again generates a brand-new short code automatically
 - Every click is tracked and stored, along with the exact creation date and time of each link
 
-(back to top)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
-- ![Python](https://img.shields.io/badge/python-3.x-blue)
-- ![Flask](https://img.shields.io/badge/flask-framework-black)
-- SQLite3 (Python built-in)
+- [![Python](https://img.shields.io/badge/python-3.x-blue)](https://www.python.org/)
+- [![Flask](https://img.shields.io/badge/flask-framework-black)](https://flask.palletsprojects.com/)
+- [![SQLite](https://img.shields.io/badge/sqlite-database-lightgrey)](https://www.sqlite.org/)
 
-(back to top)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Key Features
 
@@ -71,7 +71,7 @@ Here's what makes it useful:
 | Auto Regeneration | Creates a new short code automatically if the old one expired |
 | Creation Date Logging | Stores the exact date and time each short URL was created |
 
-(back to top)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Getting Started
 
@@ -121,7 +121,7 @@ DATABASE_NAME=urls.db
 PORT=5000
 ```
 
-(back to top)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Usage
 
@@ -139,7 +139,7 @@ http://127.0.0.1:5000
 
 Use Thunder Client, Postman, or your browser to interact with the API endpoints below.
 
-(back to top)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## API Endpoints
 
@@ -191,7 +191,7 @@ Returns the original URL and all statistics for a given short code.
 
 Redirects to the original URL, tracks the click count, and checks expiry/click limit before redirecting.
 
-(back to top)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Validation Rules
 
@@ -204,7 +204,7 @@ Redirects to the original URL, tracks the click count, and checks expiry/click l
 | Short Code Format | 6 random letters/digits followed by 3 random digits (e.g. `aB3xZ9456`) |
 | Missing URL Field | Returns a `400` error if the `url` field is missing from the request body |
 
-(back to top)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Project Structure
 
@@ -216,7 +216,7 @@ Redirects to the original URL, tracks the click count, and checks expiry/click l
 | `README.md` | Project documentation |
 | `urls.db` | SQLite database (auto-generated on first run) |
 
-(back to top)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Roadmap
 
@@ -233,7 +233,7 @@ Redirects to the original URL, tracks the click count, and checks expiry/click l
 
 See the [open issues](https://github.com/prarthanasriyas7/url-shortener/issues) for a full list of proposed features and known issues.
 
-(back to top)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Contributing
 
@@ -247,13 +247,13 @@ If you have a suggestion that would make this better, please fork the repo and c
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-(back to top)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-(back to top)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Contact
 
@@ -261,4 +261,4 @@ Prarthana Sriya - prarthanasriyas@gmail.com - [LinkedIn](https://linkedin.com/in
 
 Project Link: [https://github.com/prarthanasriyas7/url-shortener](https://github.com/prarthanasriyas7/url-shortener)
 
-(back to top)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
