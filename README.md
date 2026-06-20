@@ -14,22 +14,26 @@ A Flask-based URL Shortener API that converts long URLs into short, shareable li
 
 </div>
 
-## Table of Contents
+<details>
+<summary>Table of Contents</summary>
 
-- [About The Project](#about-the-project)
-  - [Built With](#built-with)
-- [Key Features](#key-features)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Configuration](#configuration)
-- [Usage](#usage)
-- [API Endpoints](#api-endpoints)
-- [Project Structure](#project-structure)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+1. [About The Project](#about-the-project)
+   - [Built With](#built-with)
+2. [Key Features](#key-features)
+3. [Getting Started](#getting-started)
+   - [Prerequisites](#prerequisites)
+   - [Installation](#installation)
+   - [Configuration](#configuration)
+4. [Usage](#usage)
+5. [API Endpoints](#api-endpoints)
+6. [Validation Rules](#validation-rules)
+7. [Project Structure](#project-structure)
+8. [Roadmap](#roadmap)
+9. [Contributing](#contributing)
+10. [License](#license)
+11. [Contact](#contact)
+
+</details>
 
 ## About The Project
 
@@ -44,7 +48,7 @@ Here's what makes it useful:
 - Once a link expires, submitting the same long URL again generates a brand-new short code automatically
 - Every click is tracked and stored, along with the exact creation date and time of each link
 
-(<a href="#readme-top">back to top</a>)
+(back to top)
 
 ### Built With
 
@@ -52,7 +56,7 @@ Here's what makes it useful:
 - ![Flask](https://img.shields.io/badge/flask-framework-black)
 - SQLite3 (Python built-in)
 
-(<a href="#readme-top">back to top</a>)
+(back to top)
 
 ## Key Features
 
@@ -67,7 +71,7 @@ Here's what makes it useful:
 | Auto Regeneration | Creates a new short code automatically if the old one expired |
 | Creation Date Logging | Stores the exact date and time each short URL was created |
 
-(<a href="#readme-top">back to top</a>)
+(back to top)
 
 ## Getting Started
 
@@ -117,7 +121,7 @@ DATABASE_NAME=urls.db
 PORT=5000
 ```
 
-(<a href="#readme-top">back to top</a>)
+(back to top)
 
 ## Usage
 
@@ -135,7 +139,7 @@ http://127.0.0.1:5000
 
 Use Thunder Client, Postman, or your browser to interact with the API endpoints below.
 
-(<a href="#readme-top">back to top</a>)
+(back to top)
 
 ## API Endpoints
 
@@ -187,7 +191,20 @@ Returns the original URL and all statistics for a given short code.
 
 Redirects to the original URL, tracks the click count, and checks expiry/click limit before redirecting.
 
-(<a href="#readme-top">back to top</a>)
+(back to top)
+
+## Validation Rules
+
+| Rule | Behavior |
+|---|---|
+| Duplicate URL | If the same long URL is submitted while its short code is still active, the same short code is returned instead of creating a new one |
+| Click Limit | Optional integer; once `click_count` reaches `click_limit`, the short URL stops redirecting and returns an error |
+| Expiry Date | Optional date in `YYYY-MM-DD` format; once the current date passes the expiry date, the short URL stops redirecting |
+| Expired URL Resubmission | If a short URL has expired (by date or click limit) and the same long URL is submitted again, a brand-new short code is generated automatically with fresh settings |
+| Short Code Format | 6 random letters/digits followed by 3 random digits (e.g. `aB3xZ9456`) |
+| Missing URL Field | Returns a `400` error if the `url` field is missing from the request body |
+
+(back to top)
 
 ## Project Structure
 
@@ -199,7 +216,7 @@ Redirects to the original URL, tracks the click count, and checks expiry/click l
 | `README.md` | Project documentation |
 | `urls.db` | SQLite database (auto-generated on first run) |
 
-(<a href="#readme-top">back to top</a>)
+(back to top)
 
 ## Roadmap
 
@@ -216,7 +233,7 @@ Redirects to the original URL, tracks the click count, and checks expiry/click l
 
 See the [open issues](https://github.com/prarthanasriyas7/url-shortener/issues) for a full list of proposed features and known issues.
 
-(<a href="#readme-top">back to top</a>)
+(back to top)
 
 ## Contributing
 
@@ -230,18 +247,18 @@ If you have a suggestion that would make this better, please fork the repo and c
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-(<a href="#readme-top">back to top</a>)
+(back to top)
 
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-(<a href="#readme-top">back to top</a>)
+(back to top)
 
 ## Contact
 
-Prarthana Sriya - [LinkedIn](https://linkedin.com/in/prarthanasriyas)
+Prarthana Sriya - prarthanasriyas@gmail.com - [LinkedIn](https://linkedin.com/in/prarthanasriyas)
 
 Project Link: [https://github.com/prarthanasriyas7/url-shortener](https://github.com/prarthanasriyas7/url-shortener)
 
-(<a href="#readme-top">back to top</a>)
+(back to top)
